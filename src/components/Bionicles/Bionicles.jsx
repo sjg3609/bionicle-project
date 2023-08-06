@@ -3,9 +3,11 @@
 function Bionicles() {
 
     return (
-        <>
-            <h1>This is will be where my Bionicles are!</h1>
-        </>
+        <div className="bionicles">
+            <center>
+                <h1>This is will be where my Bionicles are displayed!</h1>
+            </center>
+        </div>
     )
 }
 
