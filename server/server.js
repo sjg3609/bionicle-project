@@ -23,8 +23,8 @@ app.use(sessionMiddleware);
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get('/api/search/:id', (req, res) => {
-  axios.get(`https://api.giphy.com/v1/gifs/search?api_key=${process.env.BIONICLE_API_KEY}&q=${req.params.id}&limit=25&offset=0&rating=g&lang=en`).then((response) => {
+app.get('/api/bionicle/', (req, res) => {
+  axios.get(`/api/v3.asmx/getSets?apiKey=3-pDX2-q7hs-6ktqp&userHash=537153&params=${req.params.id}`).then((response) => {
     res.send(response.data);
   }).catch((error) => {
     console.log(error);
