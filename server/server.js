@@ -23,7 +23,7 @@ app.use(sessionMiddleware);
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get('/api/bionicle/', (req, res) => {
+app.get('/api/bionicle/:id', (req, res) => {
   axios.get(`/api/v3.asmx/getSets?apiKey=${process.env.BIONICLE_API_KEY}&userHash=${process.env.USER_HASH}&params=${req.params.id}`).then((response) => {
     res.send(response.data);
   }).catch((error) => {
