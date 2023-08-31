@@ -24,7 +24,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get('/api/bionicle/', (req, res) => {
-  axios.get(`/api/v3.asmx/getSets?apiKey=3-pDX2-q7hs-6ktqp&userHash=537153&params=${req.params.id}`).then((response) => {
+  axios.get(`/api/v3.asmx/getSets?apiKey=${process.env.BIONICLE_API_KEY}&userHash=${process.env.USER_HASH}&params=${req.params.id}`).then((response) => {
     res.send(response.data);
   }).catch((error) => {
     console.log(error);
