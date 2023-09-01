@@ -22,6 +22,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import Bionicles from '../Bionicles/Bionicles';
 
 import './App.css';
+import MyCollection from '../Bionicles/MyCollection';
 
 function App() {
   const dispatch = useDispatch();
@@ -112,6 +113,9 @@ function App() {
           </Route>
           <Route exact path="/bionicles">
             <Bionicles />
+          </Route>
+          <Route exact path="/my-collection">
+            <MyCollection />
           </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}

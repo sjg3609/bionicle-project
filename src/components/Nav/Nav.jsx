@@ -31,10 +31,9 @@ function Nav() {
             <Link className="navLink" to="/bionicles">
               Bionicles
             </Link>
-            <Link className="navLink" to="/info">
-              Info Page
+            <Link className="navLink" to="/my-collection">
+              My Collection
             </Link>
-
             <LogOutButton className="navLink" />
           </>
         )}

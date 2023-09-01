@@ -18,9 +18,11 @@ function Bionicles() {
     return (
         <div className="bionicles">
             <center>
-                <h1>This is will be where my Bionicles are displayed!</h1>
-                <input type="search" value={bionicles} onChange={handleChange}/>
-                <button onClick={search}>Search</button>
+                <h1>Find your Bionicles!</h1>
+                <form>
+                    <input type="search" value={bionicles} onChange={handleChange} />
+                    <button onClick={search}>Search</button>
+                </form>
 
             </center>
         </div>
