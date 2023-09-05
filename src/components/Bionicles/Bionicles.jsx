@@ -23,7 +23,6 @@ function Bionicles() {
                     <input type="search" value={bionicles} onChange={handleChange} />
                     <button onClick={search}>Search</button>
                 </form>
-
             </center>
         </div>
     )
