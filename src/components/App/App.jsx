@@ -111,12 +111,12 @@ function App() {
               <LandingPage />
             }
           </Route>
-          <Route exact path="/bionicles">
+          <ProtectedRoute exact path="/bionicles">
             <Bionicles />
-          </Route>
-          <Route exact path="/my-collection">
+          </ProtectedRoute>
+          <ProtectedRoute exact path="/my-collection">
             <MyCollection />
-          </Route>
+          </ProtectedRoute>
 
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>
