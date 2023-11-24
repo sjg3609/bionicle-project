@@ -1,4 +1,4 @@
-const bioniclesReducer = (state = {}, action) => {
+const bioniclesReducer = (state = [], action) => {
     switch (action.type) {
         case 'SET_BIONICLES':
             console.log('Bionicles should be here', action.payload)
