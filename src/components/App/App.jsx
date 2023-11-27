@@ -23,6 +23,7 @@ import SearchBar from '../Bionicles/SearchBar';
 
 import './App.css';
 import MyCollection from '../Bionicles/MyCollection';
+import Bionicles from '../Bionicles/Bionicles';
 
 function App() {
   const dispatch = useDispatch();
@@ -113,6 +114,9 @@ function App() {
           </Route>
           <ProtectedRoute exact path="/bionicles">
             <SearchBar />
+            <br />
+            <br />
+            <Bionicles/>
           </ProtectedRoute>
           <ProtectedRoute exact path="/my-collection">
             <MyCollection />

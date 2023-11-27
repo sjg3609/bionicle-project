@@ -5,16 +5,21 @@ function Bionicles() {
 
     const bionicles = useSelector(store => store.bionicles);
 
-    console.log('Checking for bionicles', bionicles);
+    console.log('Checking for bionicles', bionicles.results);
 
-    return(
+    return (
         <div>
-            <h4>Here are your results:</h4>
-            {
-                bionicles.map(sets => {
-                    <h5>{sets.name}</h5>
-                })
-            }
+            <center>
+                <h4>Here are your results:</h4>
+                {
+                    bionicles.map(sets => (
+                        <h5>{sets.results}</h5>
+                    ))
+                }
+            </center>
+
         </div>
     )
 }
+
+export default Bionicles;
