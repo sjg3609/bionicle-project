@@ -23,8 +23,11 @@ app.use(sessionMiddleware);
 app.use(passport.initialize());
 app.use(passport.session());
 
+// https://rebrickable.com/api/v3/lego/sets/?search=bionicle
+
+
 app.get('/api/bionicle/:id', (req, res) => {
-  axios.get(`https://brickset.com/api/v3.asmx/getSets?apiKey=${process.env.BIONICLE_API_KEY}&userHash=${process.env.USER_HASH}&params=${req.params.id}`).then((response) => {
+  axios.get(`https://rebrickable.com/api/v3/lego/sets/?key=${process.env.BIONICLE_API_KEY}&search=${req.params.id}`).then((response) => {
     console.log("This should be my data", response.data);
     res.send(response.data);
   }).catch((error) => {
