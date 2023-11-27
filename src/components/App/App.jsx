@@ -19,7 +19,7 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-import Bionicles from '../Bionicles/Bionicles';
+import SearchBar from '../Bionicles/SearchBar';
 
 import './App.css';
 import MyCollection from '../Bionicles/MyCollection';
@@ -112,7 +112,7 @@ function App() {
             }
           </Route>
           <ProtectedRoute exact path="/bionicles">
-            <Bionicles />
+            <SearchBar />
           </ProtectedRoute>
           <ProtectedRoute exact path="/my-collection">
             <MyCollection />

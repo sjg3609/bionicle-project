@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-function Bionicles() {
+function SearchBar() {
 
     const dispatch = useDispatch();
     const [bionicles, setBionicles] = useState('');
@@ -23,9 +23,10 @@ function Bionicles() {
                     <input type="search" value={bionicles} onChange={handleChange} />
                     <button onClick={search}>Search</button>
                 </form>
+                
             </center>
         </div>
     )
 }
 
-export default Bionicles;
+export default SearchBar;
