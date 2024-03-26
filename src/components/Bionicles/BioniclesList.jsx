@@ -23,11 +23,18 @@ function BioniclesList() {
                 ) : (
                     bionicles.results.map(sets => {
                         return (
-                            <Card key={sets.id}>
-                                <p>{sets.name}</p>
-                                <img src={sets.set_img_url}></img>
+                            <div className="results">
+                                <Card key={sets.set_num}
+                                    sx={{
+                                        boxShadow: 4,
+                                        width: '650px',
+                                        height: '550px',
+                                    }}>
+                                    <h3>{sets.name}</h3>
+                                    <img src={sets.set_img_url}  height='fit-content' width='fit-content'></img>
+                                </Card>
                                 <br />
-                            </Card>
+                            </div>
                         )
                     })
                 )
