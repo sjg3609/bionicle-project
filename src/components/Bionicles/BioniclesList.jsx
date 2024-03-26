@@ -31,7 +31,7 @@ function BioniclesList() {
                                         height: '550px',
                                     }}>
                                     <h3>{sets.name}</h3>
-                                    <img src={sets.set_img_url}  height='fit-content' width='fit-content'></img>
+                                    <img src={sets.set_img_url}  height='min-content' width='min-content'></img>
                                 </Card>
                                 <br />
                             </div>
