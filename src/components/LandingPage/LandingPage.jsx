@@ -15,16 +15,19 @@ function LandingPage() {
 
   return (
     <div className="container">
-      <h2>{heading}</h2>
-      <div className="grid">
-        <center>
-          <RegisterForm />
-          <h4>Already a Member?</h4>
-          <button className="btn btn_sizeSm" onClick={onLogin}>
-            Login
-          </button>
-        </center>
-      </div>
+      <center>
+        <h2>{heading}</h2>
+        <div>
+          <center>
+            <RegisterForm />
+            <h4>Already a Member?</h4>
+            <button className="btn btn_sizeSm" onClick={onLogin}>
+              Login
+            </button>
+          </center>
+        </div>
+      </center>
+
     </div>
   );
 }

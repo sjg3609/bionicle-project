@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Container, Grid, Card, IconButton, CardContent, Typography, Button, Modal } from '@mui/material';
 
 
 function BioniclesList() {
@@ -8,6 +9,9 @@ function BioniclesList() {
 
     console.log('Checking for bionicles', bionicles.results);
 
+    const showDetails = {
+
+    }
 
     return (
         <div className="bionicleList">
@@ -17,10 +21,15 @@ function BioniclesList() {
                         Please search for your bionicles, the results will show here
                     </h4>
                 ) : (
-                    bionicles.results.map(sets => (
-                        <h2>{sets.set_img_url}</h2>
-                        // <p>{sets.name}</p>
-                    ))
+                    bionicles.results.map(sets => {
+                        return (
+                            <Card key={sets.id}>
+                                <p>{sets.name}</p>
+                                <img src={sets.set_img_url}></img>
+                                <br />
+                            </Card>
+                        )
+                    })
                 )
 
             }

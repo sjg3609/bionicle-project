@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Bionicles from './Bionicles';
+import BioniclesList from './BioniclesList';
 
 function SearchBar() {
 
@@ -24,7 +24,9 @@ function SearchBar() {
                     <input type="search" value={bionicles} onChange={handleChange} />
                     <button onClick={search}>Search</button>
                 </form>
+                 <BioniclesList />
             </center>
+           
         </div>
     )
 }
