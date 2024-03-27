@@ -7,7 +7,6 @@ function BioniclesList() {
 
     const bionicles = useSelector(store => store.bionicles);
 
-    console.log('Checking for bionicles', bionicles.results);
 
     const showDetails = {
 
@@ -24,14 +23,14 @@ function BioniclesList() {
                     bionicles.results.map(sets => {
                         return (
                             <div className="results">
-                                <Card key={sets.set_num}
+                                <Card key={sets.id}
                                     sx={{
                                         boxShadow: 4,
                                         width: '650px',
                                         height: '550px',
                                     }}>
                                     <h3>{sets.name}</h3>
-                                    <img src={sets.set_img_url}  height='min-content' width='min-content'></img>
+                                    <img src={sets.set_img_url}  height='65%' width='fit-content'></img>
                                 </Card>
                                 <br />
                             </div>
